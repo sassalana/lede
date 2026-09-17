@@ -30,20 +30,6 @@
 | `sha256sums` | 固件校验和 |
 | `*.manifest` | 已安装软件包清单 |
 
-
-## 自行编译
-
-```bash
-git clone https://github.com/sassalana/lede.git
-cd lede
-./scripts/feeds update -a
-./scripts/feeds install -a
-cp configs/mangopi_m28c.config .config
-make defconfig
-make -j$(nproc) download
-make -j$(nproc)
-```
-
 编译产物在 `bin/targets/rockchip/armv8/`。
 
 ---
